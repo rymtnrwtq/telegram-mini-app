@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,42 +20,28 @@
             padding: 20px;
             text-align: center;
         }
+
         h1 {
             margin-bottom: 10px;
         }
+
         p {
             font-size: 1.2em;
             line-height: 1.5;
         }
+
         .card {
             background-color: var(--tg-theme-secondary-bg-color, #f0f0f0);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
+
 <body>
-    <div class="card">
-        <h1>Hello, World!</h1>
-        <p>This is a simple text-based Telegram Mini App.</p>
-        <p id="user-name"></p>
-    </div>
-
-    <script>
-        const tg = window.Telegram.WebApp;
-        tg.ready();
-
-        const userNameDisplay = document.getElementById('user-name');
-        if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
-            userNameDisplay.textContent = `Welcome, ${tg.initDataUnsafe.user.first_name}!`;
-        } else {
-            userNameDisplay.textContent = 'Welcome, Guest!';
-        }
-        
-        tg.MainButton.setText('Close App').show().onClick(() => {
-            tg.close();
-        });
-    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
