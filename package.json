@@ -1,0 +1,12 @@
+{
+  "name": "telegram-mini-app-text",
+  "version": "1.0.0",
+  "description": "A simple text-based Telegram Mini App",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}
